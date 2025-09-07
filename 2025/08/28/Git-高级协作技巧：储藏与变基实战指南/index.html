@@ -26,14 +26,14 @@
 <meta property="og:site_name" content="Pumpkynn">
 <meta property="og:description" content="引言在Git 场景化实战指南：从菜鸟到高手的完整攻略中，我们学习了 Git 的基础操作和常见工作流程。现在让我们深入探讨两个高级但极其实用的 Git 功能：储藏(stash)和变基(rebase)。掌握这些技巧将显著提升你的 Git 工作流效率！ stash 储藏操作场景：你正在开发一个功能，但突然需要切换到另一个紧急任务。，这时就需要用到git stash操作来临时保存当前的工作进度了 具体操作">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:\Users\kitty\Desktop\2106737dfc50e222cb500889a1c0b046.png">
-<meta property="og:image" content="c:\Users\kitty\Desktop\image-20250827225528158.png">
+<meta property="og:image" content="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/bb3ab38a6248409d8079a9c54d28a752~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5pep552h5pep6LW35aS05Y-R5aSa:q75.awebp?rk3s=f64ab15b&x-expires=1757610053&x-signature=941wenpOuA2y7P9BGhOAw7nVguw=">
+<meta property="og:image" content="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/cf4d18173ab7485dae1035de4e5f333c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5pep552h5pep6LW35aS05Y-R5aSa:q75.awebp?rk3s=f64ab15b&x-expires=1757610053&x-signature=WKKZUkWuAuuv0IK5E9RAxV3oZLw=">
 <meta property="article:published_time" content="2025-08-27T16:15:22.000Z">
-<meta property="article:modified_time" content="2025-08-27T16:28:40.284Z">
+<meta property="article:modified_time" content="2025-09-07T05:51:53.766Z">
 <meta property="article:author" content="Pumpkynn">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:\Users\kitty\Desktop\2106737dfc50e222cb500889a1c0b046.png">
+<meta name="twitter:image" content="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/bb3ab38a6248409d8079a9c54d28a752~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5pep552h5pep6LW35aS05Y-R5aSa:q75.awebp?rk3s=f64ab15b&x-expires=1757610053&x-signature=941wenpOuA2y7P9BGhOAw7nVguw=">
   
   
   
@@ -319,7 +319,7 @@
 <h3 id="4-rebase-的使用场景："><a href="#4-rebase-的使用场景：" class="headerlink" title="4.rebase 的使用场景："></a><strong>4.rebase 的使用场景：</strong></h3><h4 id="场景1：你的分支落后了，需要同步最新代码"><a href="#场景1：你的分支落后了，需要同步最新代码" class="headerlink" title="场景1：你的分支落后了，需要同步最新代码"></a><strong>场景1：你的分支落后了，需要同步最新代码</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 情况：你一周前从主分支创建了功能分支</span><br> <span class="hljs-comment"># A---B---C feature</span><br> <span class="hljs-comment">#         /</span><br> <span class="hljs-comment">#  D---E---F---G main</span><br><span class="hljs-comment"># 现在主分支有了很多新更新，你的分支落后了</span><br><br>git <span class="hljs-built_in">log</span> --oneline --graph<br><span class="hljs-comment">#log：显示提交历史</span><br><span class="hljs-comment">#--oneline：每个提交只显示一行（缩短的哈希值 + 提交信息）</span><br><span class="hljs-comment">#--graph：用 ASCII 图形显示分支和合并历史</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>显示出的提交历史示例：</strong></p>
-<p><img src="C:\Users\kitty\Desktop\2106737dfc50e222cb500889a1c0b046.png" srcset="/img/loading.gif" lazyload alt="2106737dfc50e222cb500889a1c0b046"></p>
+<p><img src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/bb3ab38a6248409d8079a9c54d28a752~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5pep552h5pep6LW35aS05Y-R5aSa:q75.awebp?rk3s=f64ab15b&x-expires=1757610053&x-signature=941wenpOuA2y7P9BGhOAw7nVguw=" srcset="/img/loading.gif" lazyload></p>
 <p><strong>解读这个图形：</strong></p>
 <ol>
 <li><strong><code>\*</code></strong> 表示一个提交</li>
@@ -329,7 +329,7 @@
 </ol>
 <p><strong>执行变基操作</strong><code>git rebase main</code>，这个命令的意思是：<strong>“将 当前feature 分支的提交重新应用到 main 分支的最新状态之上”</strong></p>
 <p><strong>变基后的结果</strong></p>
-<p><img src="C:\Users\kitty\Desktop\image-20250827225528158.png" srcset="/img/loading.gif" lazyload alt="image-20250827225528158"></p>
+<p><img src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/cf4d18173ab7485dae1035de4e5f333c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5pep552h5pep6LW35aS05Y-R5aSa:q75.awebp?rk3s=f64ab15b&x-expires=1757610053&x-signature=WKKZUkWuAuuv0IK5E9RAxV3oZLw=" srcset="/img/loading.gif" lazyload></p>
 <p><strong>现在的状态：</strong></p>
 <ol>
 <li><strong>变成了线性历史</strong>：没有分支分叉了</li>

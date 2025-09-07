@@ -19,23 +19,21 @@
   <meta name="author" content="Pumpkynn">
   <meta name="keywords" content="">
   
-    <meta name="description" content="JS 循环指南：区别与选择前言JavaScript 提供了多种循环方式，每种都有其特定的用途。了解它们的区别对于编写高效代码至关重要。本文将简要介绍各种循环及其适用场景。 循环类型详解1. 传统 for 循环for 循环是最经典且灵活的循环结构，特别适合已知循环次数的场景。 123456789&#x2F;&#x2F; 基本语法for (初始化; 条件; 增量) &#123;  &#x2F;&#x2F; 循环体&#125;&#x2F;&#x2F; 实际示例f">
+    <meta name="description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS 循环指南：区别与选择">
-<meta property="og:url" content="http://example.com/2025/09/07/JS-%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%8D%97%EF%BC%9A%E5%8C%BA%E5%88%AB%E4%B8%8E%E9%80%89%E6%8B%A9/index.html">
+<meta property="og:title" content="重新理解JavaScript数据类型：值类型 vs 引用类型">
+<meta property="og:url" content="http://example.com/2025/09/07/%E9%87%8D%E6%96%B0%E7%90%86%E8%A7%A3JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9A%E5%80%BC%E7%B1%BB%E5%9E%8B-vs-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Pumpkynn">
-<meta property="og:description" content="JS 循环指南：区别与选择前言JavaScript 提供了多种循环方式，每种都有其特定的用途。了解它们的区别对于编写高效代码至关重要。本文将简要介绍各种循环及其适用场景。 循环类型详解1. 传统 for 循环for 循环是最经典且灵活的循环结构，特别适合已知循环次数的场景。 123456789&#x2F;&#x2F; 基本语法for (初始化; 条件; 增量) &#123;  &#x2F;&#x2F; 循环体&#125;&#x2F;&#x2F; 实际示例f">
+<meta property="og:description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pictures/js%E5%BE%AA%E7%8E%AF%E9%80%89%E6%8B%A9.png">
-<meta property="article:published_time" content="2025-09-07T05:32:24.000Z">
-<meta property="article:modified_time" content="2025-09-07T05:36:50.033Z">
+<meta property="article:published_time" content="2025-09-07T05:44:08.000Z">
+<meta property="article:modified_time" content="2025-09-07T05:44:56.710Z">
 <meta property="article:author" content="Pumpkynn">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/pictures/js%E5%BE%AA%E7%8E%AF%E9%80%89%E6%8B%A9.png">
   
   
   
-  <title>JS 循环指南：区别与选择 - Pumpkynn</title>
+  <title>重新理解JavaScript数据类型：值类型 vs 引用类型 - Pumpkynn</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="JS 循环指南：区别与选择"></span>
+            <span id="subtitle" data-typed-text="重新理解JavaScript数据类型：值类型 vs 引用类型"></span>
           
         </div>
 
@@ -212,7 +210,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-07 13:32" pubdate>
+        <time datetime="2025-09-07 13:44" pubdate>
           2025年9月7日 下午
         </time>
       </span>
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          592 字
+          900 字
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          5 分钟
+          8 分钟
         
       </span>
     
@@ -272,69 +270,129 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JS 循环指南：区别与选择</h1>
+            <h1 id="seo-header">重新理解JavaScript数据类型：值类型 vs 引用类型</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="JS-循环指南：区别与选择"><a href="#JS-循环指南：区别与选择" class="headerlink" title="JS 循环指南：区别与选择"></a>JS 循环指南：区别与选择</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>JavaScript 提供了多种循环方式，每种都有其特定的用途。了解它们的区别对于编写高效代码至关重要。本文将简要介绍各种循环及其适用场景。</p>
-<h2 id="循环类型详解"><a href="#循环类型详解" class="headerlink" title="循环类型详解"></a>循环类型详解</h2><h3 id="1-传统-for-循环"><a href="#1-传统-for-循环" class="headerlink" title="1. 传统 for 循环"></a>1. 传统 for 循环</h3><p><strong>for</strong> 循环是最经典且灵活的循环结构，特别适合已知循环次数的场景。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 基本语法</span><br><span class="hljs-keyword">for</span> (初始化; 条件; 增量) &#123;<br>  <span class="hljs-comment">// 循环体</span><br>&#125;<br><br><span class="hljs-comment">// 实际示例</span><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`当前索引: <span class="hljs-subst">$&#123;i&#125;</span>`</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="2-while-循环"><a href="#2-while-循环" class="headerlink" title="2. while 循环"></a>2. while 循环</h3><p><strong>while</strong> 循环在<strong>不确定循环次数</strong>但需要满足特定条件时使用。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">5</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(count);<br>  count++;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-do…while-循环"><a href="#3-do…while-循环" class="headerlink" title="3. do…while 循环"></a>3. do…while 循环</h3><p><strong>do…while</strong> 循环保证循环体至少执行一次，适合需要<strong>先执行再判断</strong>的场景。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> input;<br><span class="hljs-keyword">do</span> &#123;<br>  input = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;请输入yes退出:&#x27;</span>);<br>&#125; <span class="hljs-keyword">while</span> (input !== <span class="hljs-string">&#x27;yes&#x27;</span>);<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-for…in-循环"><a href="#4-for…in-循环" class="headerlink" title="4. for…in 循环"></a>4. for…in 循环</h3><p><strong>for…in</strong> 专门用于遍历对象的可枚举属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> user = &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">30</span>, <span class="hljs-attr">role</span>: <span class="hljs-string">&#x27;developer&#x27;</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> user) &#123;<br>  <span class="hljs-keyword">if</span> (user.<span class="hljs-title function_">hasOwnProperty</span>(key)) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">$&#123;key&#125;</span>: <span class="hljs-subst">$&#123;user[key]&#125;</span>`</span>);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="5-for…of-循环-ES6"><a href="#5-for…of-循环-ES6" class="headerlink" title="5. for…of 循环 (ES6+)"></a>5. for…of 循环 (ES6+)</h3><p><strong>for…of</strong> 是现代 JavaScript 中遍历可迭代对象（如数组、字符串）的首选方式。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 遍历数组</span><br><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>, <span class="hljs-string">&#x27;orange&#x27;</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> fruit <span class="hljs-keyword">of</span> fruits) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fruit);<br>&#125;<br><br><span class="hljs-comment">// 遍历字符串</span><br><span class="hljs-keyword">const</span> text = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> char <span class="hljs-keyword">of</span> text) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(char);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="6-forEach-方法"><a href="#6-forEach-方法" class="headerlink" title="6. forEach 方法"></a>6. forEach 方法</h3><p>数组的 <strong>forEach</strong> 方法提供了一种函数式的迭代方式。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br>numbers.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">number, index</span>) =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`索引 <span class="hljs-subst">$&#123;index&#125;</span>: 值 <span class="hljs-subst">$&#123;number&#125;</span>`</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
-
-<h2 id="循环对比与选择指南"><a href="#循环对比与选择指南" class="headerlink" title="循环对比与选择指南"></a>循环对比与选择指南</h2><h3 id="性能考虑"><a href="#性能考虑" class="headerlink" title="性能考虑"></a>性能考虑</h3><ul>
-<li><strong>for</strong> 和 <strong>while</strong> 循环通常性能最优</li>
-<li><strong>forEach</strong> 在某些JavaScript引擎中可能有轻微性能开销</li>
-<li><strong>for…of</strong> 比传统的 <strong>for</strong> 循环稍慢，但代码更简洁</li>
-</ul>
-<h3 id="如何选择？一张图帮你决定"><a href="#如何选择？一张图帮你决定" class="headerlink" title="如何选择？一张图帮你决定"></a>如何选择？一张图帮你决定</h3><p><img src="/pictures/js%E5%BE%AA%E7%8E%AF%E9%80%89%E6%8B%A9.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><table>
+                <p>在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。</p>
+<h2 id="核心概念：两种不同的处理方式"><a href="#核心概念：两种不同的处理方式" class="headerlink" title="核心概念：两种不同的处理方式"></a>核心概念：两种不同的处理方式</h2><h3 id="原始类型：直接操作值本身"><a href="#原始类型：直接操作值本身" class="headerlink" title="原始类型：直接操作值本身"></a>原始类型：直接操作值本身</h3><p>原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。</p>
+<h3 id="引用类型：通过地址间接操作"><a href="#引用类型：通过地址间接操作" class="headerlink" title="引用类型：通过地址间接操作"></a>引用类型：通过地址间接操作</h3><p>引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你是通过地址来间接访问和修改实际的数据。</p>
+<h2 id="原始类型：值的直接存储"><a href="#原始类型：值的直接存储" class="headerlink" title="原始类型：值的直接存储"></a>原始类型：值的直接存储</h2><p>原始类型有7种，它们都是不可变的（immutable）：</p>
+<table>
 <thead>
 <tr>
-<th align="left">场景</th>
-<th align="left">推荐</th>
+<th>类型</th>
+<th>示例</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><strong>遍历数组</strong></td>
-<td align="left"><code>for...of</code> (首选) 或 <code>for</code></td>
+<td>Number</td>
+<td><code>let age = 25</code></td>
+<td>数字，包括整数和浮点数</td>
 </tr>
 <tr>
-<td align="left"><strong>遍历对象属性</strong></td>
-<td align="left"><code>for...in</code> (记得用 <code>hasOwnProperty</code> 检查)</td>
+<td>String</td>
+<td><code>let name = &quot;Alice&quot;</code></td>
+<td>字符串文本</td>
 </tr>
 <tr>
-<td align="left"><strong>需要高度控制循环次数和过程</strong></td>
-<td align="left"><code>for</code></td>
+<td>Boolean</td>
+<td><code>let isActive = true</code></td>
+<td>布尔值 true&#x2F;false</td>
 </tr>
 <tr>
-<td align="left"><strong>不确定循环次数，但必须先判断条件</strong></td>
-<td align="left"><code>while</code></td>
+<td>Undefined</td>
+<td><code>let value</code></td>
+<td>未赋值的变量</td>
 </tr>
 <tr>
-<td align="left"><strong>循环体至少必须执行一次</strong></td>
-<td align="left"><code>do...while</code></td>
+<td>Null</td>
+<td><code>let data = null</code></td>
+<td>明确的无值状态</td>
 </tr>
 <tr>
-<td align="left"><strong>简单遍历数组且不需要中断</strong></td>
-<td align="left"><code>forEach</code></td>
+<td>BigInt</td>
+<td><code>let big = 123n</code></td>
+<td>大整数</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td><code>let id = Symbol()</code></td>
+<td>唯一标识符</td>
 </tr>
 </tbody></table>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>掌握不同类型的循环是 JavaScript 编程的基础。根据实际需求选择合适的循环方式，能让你的代码更简洁高效。</p>
+<p><strong>关键特性：</strong></p>
+<ul>
+<li>变量直接包含值</li>
+<li>赋值时创建值的副本</li>
+<li>比较时比较实际值</li>
+<li>值本身不可改变</li>
+</ul>
+<h2 id="引用类型：地址的间接访问"><a href="#引用类型：地址的间接访问" class="headerlink" title="引用类型：地址的间接访问"></a>引用类型：地址的间接访问</h2><p>引用类型都是对象的不同形式：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Object</td>
+<td><code>let obj = &#123;&#125;</code></td>
+<td>普通对象</td>
+</tr>
+<tr>
+<td>Array</td>
+<td><code>let arr = []</code></td>
+<td>数组</td>
+</tr>
+<tr>
+<td>Function</td>
+<td><code>function fn() &#123;&#125;</code></td>
+<td>函数</td>
+</tr>
+<tr>
+<td>Date</td>
+<td><code>new Date()</code></td>
+<td>日期对象</td>
+</tr>
+<tr>
+<td>其他</td>
+<td><code>Map</code>, <code>Set</code>等</td>
+<td>其他内置对象</td>
+</tr>
+</tbody></table>
+<p><strong>关键特性：</strong></p>
+<ul>
+<li>变量存储的是内存地址</li>
+<li>赋值时复制地址，而不是数据</li>
+<li>比较时比较内存地址</li>
+<li>数据内容可以改变</li>
+</ul>
+<h2 id="内存模型：理解底层差异"><a href="#内存模型：理解底层差异" class="headerlink" title="内存模型：理解底层差异"></a>内存模型：理解底层差异</h2><h3 id="原始类型的内存模型"><a href="#原始类型的内存模型" class="headerlink" title="原始类型的内存模型"></a>原始类型的内存模型</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs abnf">let a <span class="hljs-operator">=</span> <span class="hljs-number">10</span><span class="hljs-comment">;    // 内存中：变量a → 值10</span><br>let b <span class="hljs-operator">=</span> a<span class="hljs-comment">;     // 内存中：变量b → 新值10（副本）</span><br><span class="hljs-attribute">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span><span class="hljs-comment">;        // 变量b → 新值20，变量a保持不变</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="引用类型的内存模型"><a href="#引用类型的内存模型" class="headerlink" title="引用类型的内存模型"></a>引用类型的内存模型</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">let</span> obj1 = &#123; count: <span class="hljs-number">0</span> &#125;;  // 变量obj1 → 地址<span class="hljs-number">0</span>x123 → 对象&#123;count: <span class="hljs-number">0</span>&#125;<br><span class="hljs-attribute">let</span> obj2 = obj1;          // 变量obj2 → 同样的地址<span class="hljs-number">0</span>x123 → 同一个对象<br><span class="hljs-attribute">obj2</span>.count = <span class="hljs-number">5</span>;           // 通过地址修改对象，obj1.count也变成<span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="实际代码对比"><a href="#实际代码对比" class="headerlink" title="实际代码对比"></a>实际代码对比</h2><h3 id="赋值行为的差异"><a href="#赋值行为的差异" class="headerlink" title="赋值行为的差异"></a>赋值行为的差异</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 原始类型：值复制</span><br><span class="hljs-keyword">let</span> originalValue = <span class="hljs-number">100</span>;<br><span class="hljs-keyword">let</span> copiedValue = originalValue; <span class="hljs-comment">// 创建新副本</span><br>copiedValue = <span class="hljs-number">200</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(originalValue); <span class="hljs-comment">// 100 - 原值不变</span><br><br><span class="hljs-comment">// 引用类型：地址复制</span><br><span class="hljs-keyword">let</span> originalObject = &#123; <span class="hljs-attr">value</span>: <span class="hljs-number">100</span> &#125;;<br><span class="hljs-keyword">let</span> copiedObject = originalObject; <span class="hljs-comment">// 复制地址</span><br>copiedObject.<span class="hljs-property">value</span> = <span class="hljs-number">200</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(originalObject.<span class="hljs-property">value</span>); <span class="hljs-comment">// 200 - 原对象被修改</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="比较行为的差异"><a href="#比较行为的差异" class="headerlink" title="比较行为的差异"></a>比较行为的差异</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 原始类型：值比较</span><br><span class="hljs-keyword">let</span> num1 = <span class="hljs-number">5</span>;<br><span class="hljs-keyword">let</span> num2 = <span class="hljs-number">5</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num1 === num2); <span class="hljs-comment">// true - 值相同</span><br><br><span class="hljs-comment">// 引用类型：地址比较</span><br><span class="hljs-keyword">let</span> obj1 = &#123; <span class="hljs-attr">value</span>: <span class="hljs-number">5</span> &#125;;<br><span class="hljs-keyword">let</span> obj2 = &#123; <span class="hljs-attr">value</span>: <span class="hljs-number">5</span> &#125;;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj1 === obj2); <span class="hljs-comment">// false - 地址不同</span><br><br><span class="hljs-keyword">let</span> obj3 = obj1;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj1 === obj3); <span class="hljs-comment">// true - 地址相同</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="函数参数传递的差异"><a href="#函数参数传递的差异" class="headerlink" title="函数参数传递的差异"></a>函数参数传递的差异</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">modifyValue</span>(<span class="hljs-params">primitive, reference</span>) &#123;<br>    primitive = <span class="hljs-number">100</span>; <span class="hljs-comment">// 不影响外部变量</span><br>    reference.value = <span class="hljs-number">100</span>; <span class="hljs-comment">// 会影响外部对象</span><br>&#125;<br><br>let num = <span class="hljs-number">1</span>;<br>let obj = &#123; <span class="hljs-attr">value</span>: <span class="hljs-number">1</span> &#125;;<br><br>modifyValue(num, obj);<br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(num); <span class="hljs-comment">// 1 - 不变</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(obj.value); <span class="hljs-comment">// 100 - 被修改</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="为什么需要这样的设计？"><a href="#为什么需要这样的设计？" class="headerlink" title="为什么需要这样的设计？"></a>为什么需要这样的设计？</h2><h3 id="原始类型的优势"><a href="#原始类型的优势" class="headerlink" title="原始类型的优势"></a>原始类型的优势</h3><ol>
+<li><strong>性能高效</strong>：操作简单值很快</li>
+<li><strong>线程安全</strong>：不可变性避免并发问题</li>
+<li><strong>预测性强</strong>：值不会意外改变</li>
+</ol>
+<h3 id="引用类型的优势"><a href="#引用类型的优势" class="headerlink" title="引用类型的优势"></a>引用类型的优势</h3><ol>
+<li><strong>内存效率</strong>：大型对象不需要多次复制</li>
+<li><strong>状态共享</strong>：多个部分可以访问同一数据</li>
+<li><strong>动态结构</strong>：可以灵活修改和扩展</li>
+</ol>
+<p>掌握值类型与引用类型的区别，不仅能帮助你避免难以调试的意外数据修改问题，更能让你在内存管理、性能优化和代码架构设计上做出更明智的决策，这是成为JavaScript高手的重要基石！</p>
 
                 
               </div>
@@ -352,8 +410,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JS 循环指南：区别与选择</div>
-      <div>http://example.com/2025/09/07/JS-循环指南：区别与选择/</div>
+      <div>重新理解JavaScript数据类型：值类型 vs 引用类型</div>
+      <div>http://example.com/2025/09/07/重新理解JavaScript数据类型：值类型-vs-引用类型/</div>
     </div>
     <div class="license-meta">
       
@@ -397,18 +455,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/09/07/%E9%87%8D%E6%96%B0%E7%90%86%E8%A7%A3JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9A%E5%80%BC%E7%B1%BB%E5%9E%8B-vs-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" title="重新理解JavaScript数据类型：值类型 vs 引用类型">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">重新理解JavaScript数据类型：值类型 vs 引用类型</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/28/Git-%E9%AB%98%E7%BA%A7%E5%8D%8F%E4%BD%9C%E6%8A%80%E5%B7%A7%EF%BC%9A%E5%82%A8%E8%97%8F%E4%B8%8E%E5%8F%98%E5%9F%BA%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" title="Git 高级协作技巧：储藏与变基实战指南">
-                        <span class="hidden-mobile">Git 高级协作技巧：储藏与变基实战指南</span>
+                      <a href="/2025/09/07/JS-%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%8D%97%EF%BC%9A%E5%8C%BA%E5%88%AB%E4%B8%8E%E9%80%89%E6%8B%A9/" title="JS 循环指南：区别与选择">
+                        <span class="hidden-mobile">JS 循环指南：区别与选择</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
