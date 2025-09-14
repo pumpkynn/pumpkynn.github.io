@@ -19,15 +19,15 @@
   <meta name="author" content="Pumpkynn">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你">
+    <meta name="description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript 将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重新理解JavaScript数据类型：值类型 vs 引用类型">
 <meta property="og:url" content="http://example.com/2025/09/07/%E9%87%8D%E6%96%B0%E7%90%86%E8%A7%A3JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9A%E5%80%BC%E7%B1%BB%E5%9E%8B-vs-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Pumpkynn">
-<meta property="og:description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你">
+<meta property="og:description" content="在编程中，理解数据如何存储和传递是至关重要的。JavaScript 将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。 核心概念：两种不同的处理方式原始类型：直接操作值本身原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。 引用类型：通过地址间接操作引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-09-07T05:44:08.000Z">
-<meta property="article:modified_time" content="2025-09-07T06:02:59.978Z">
+<meta property="article:modified_time" content="2025-09-14T06:34:43.976Z">
 <meta property="article:author" content="Pumpkynn">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary_large_image">
@@ -276,10 +276,10 @@
             
               <div class="markdown-body">
                 
-                <p>在编程中，理解数据如何存储和传递是至关重要的。JavaScript将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。</p>
+                <p>在编程中，理解数据如何存储和传递是至关重要的。JavaScript 将数据类型分为两大阵营，它们的行为有着根本性的不同。让我们彻底搞懂这个核心概念。</p>
 <h2 id="核心概念：两种不同的处理方式"><a href="#核心概念：两种不同的处理方式" class="headerlink" title="核心概念：两种不同的处理方式"></a>核心概念：两种不同的处理方式</h2><h3 id="原始类型：直接操作值本身"><a href="#原始类型：直接操作值本身" class="headerlink" title="原始类型：直接操作值本身"></a>原始类型：直接操作值本身</h3><p>原始类型在变量中直接存储数据的实际值。当你操作这些数据时，你就是在直接操作值本身。</p>
 <h3 id="引用类型：通过地址间接操作"><a href="#引用类型：通过地址间接操作" class="headerlink" title="引用类型：通过地址间接操作"></a>引用类型：通过地址间接操作</h3><p>引用类型在变量中存储的是数据在内存中的地址（引用），而不是数据本身。当你操作这些数据时，你是通过地址来间接访问和修改实际的数据。</p>
-<h2 id="原始类型：值的直接存储"><a href="#原始类型：值的直接存储" class="headerlink" title="原始类型：值的直接存储"></a>原始类型：值的直接存储</h2><p>原始类型有7种，它们都是不可变的（immutable）：</p>
+<h2 id="原始类型：值的直接存储"><a href="#原始类型：值的直接存储" class="headerlink" title="原始类型：值的直接存储"></a>原始类型：值的直接存储</h2><p>原始类型有 7 种，它们都是不可变的（immutable）：</p>
 <table>
 <thead>
 <tr>
@@ -393,7 +393,7 @@
 <li><strong>状态共享</strong>：多个部分可以访问同一数据</li>
 <li><strong>动态结构</strong>：可以灵活修改和扩展</li>
 </ol>
-<p>掌握值类型与引用类型的区别，不仅能帮助你避免难以调试的意外数据修改问题，更能让你在内存管理、性能优化和代码架构设计上做出更明智的决策，这是成为JavaScript高手的重要基石！</p>
+<p>掌握值类型与引用类型的区别，不仅能帮助你避免难以调试的意外数据修改问题，更能让你在内存管理、性能优化和代码架构设计上做出更明智的决策，这是成为 JavaScript 高手的重要基石！</p>
 
                 
               </div>
@@ -401,6 +401,27 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/JavaScript/" class="category-chain-item">JavaScript</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
     <div class="post-meta">
@@ -462,6 +483,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/09/14/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB/" title="写在前面的面试技巧分享">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">写在前面的面试技巧分享</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

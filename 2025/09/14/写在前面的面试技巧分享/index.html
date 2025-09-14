@@ -19,24 +19,22 @@
   <meta name="author" content="Pumpkynn">
   <meta name="keywords" content="">
   
-    <meta name="description" content="CSS 盒模型：Margin vs Padding 的区别基本概念Padding（内边距）  定义：元素内容与边框之间的空间 作用区域：元素内部 背景色：会继承元素的背景色 盒模型位置：在边框内部 对盒子大小的影响：会把盒子撑大  Margin（外边距）  定义：元素边框与其他元素之间的空间 作用区域：元素外部 背景色：透明，不继承背景色 盒模型位置：在边框外部 对盒子大小的影响：不会把盒子撑大">
+    <meta name="description" content="在经历了两次比较正式的技术面试之后，我也开始反思自己的不足，找一些方法，去提高自己的面试水平，这篇文章接下来的分享内容都是来自于一档求职综艺《令人心动的 offer》第五季实习生王艺妍妤的小红书分享，共勉 在面试的时候，怎么能做到这么的自如，松弛？ 第一点就是你的面试官看似咄咄逼人，刨根问底，但他其实是真的想了解你，想了解你跟当下的这个岗位的适配度怎么样，以及想了解你说的这些事情到底是不是真实的，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS 盒模型：Margin vs Padding 的区别">
-<meta property="og:url" content="http://example.com/2025/08/24/CSS-%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%9AMargin-vs-Padding-%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:title" content="写在前面的面试技巧分享">
+<meta property="og:url" content="http://example.com/2025/09/14/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB/index.html">
 <meta property="og:site_name" content="Pumpkynn">
-<meta property="og:description" content="CSS 盒模型：Margin vs Padding 的区别基本概念Padding（内边距）  定义：元素内容与边框之间的空间 作用区域：元素内部 背景色：会继承元素的背景色 盒模型位置：在边框内部 对盒子大小的影响：会把盒子撑大  Margin（外边距）  定义：元素边框与其他元素之间的空间 作用区域：元素外部 背景色：透明，不继承背景色 盒模型位置：在边框外部 对盒子大小的影响：不会把盒子撑大">
+<meta property="og:description" content="在经历了两次比较正式的技术面试之后，我也开始反思自己的不足，找一些方法，去提高自己的面试水平，这篇文章接下来的分享内容都是来自于一档求职综艺《令人心动的 offer》第五季实习生王艺妍妤的小红书分享，共勉 在面试的时候，怎么能做到这么的自如，松弛？ 第一点就是你的面试官看似咄咄逼人，刨根问底，但他其实是真的想了解你，想了解你跟当下的这个岗位的适配度怎么样，以及想了解你说的这些事情到底是不是真实的，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pictures/%E7%9B%92%E6%A8%A1%E5%9E%8B.webp">
-<meta property="article:published_time" content="2025-08-24T09:50:27.000Z">
-<meta property="article:modified_time" content="2025-09-14T06:34:51.178Z">
+<meta property="article:published_time" content="2025-09-14T06:20:46.000Z">
+<meta property="article:modified_time" content="2025-09-14T06:36:18.483Z">
 <meta property="article:author" content="Pumpkynn">
-<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/pictures/%E7%9B%92%E6%A8%A1%E5%9E%8B.webp">
   
   
   
-  <title>CSS 盒模型：Margin vs Padding 的区别 - Pumpkynn</title>
+  <title>写在前面的面试技巧分享 - Pumpkynn</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CSS 盒模型：Margin vs Padding 的区别"></span>
+            <span id="subtitle" data-typed-text="写在前面的面试技巧分享"></span>
           
         </div>
 
@@ -213,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-24 17:50" pubdate>
-          2025年8月24日 下午
+        <time datetime="2025-09-14 14:20" pubdate>
+          2025年9月14日 下午
         </time>
       </span>
     
@@ -225,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          756 字
+          1.1k 字
         
       </span>
     
@@ -236,7 +234,7 @@
         
         
         
-          7 分钟
+          10 分钟
         
       </span>
     
@@ -273,93 +271,25 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CSS 盒模型：Margin vs Padding 的区别</h1>
+            <h1 id="seo-header">写在前面的面试技巧分享</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="CSS-盒模型：Margin-vs-Padding-的区别"><a href="#CSS-盒模型：Margin-vs-Padding-的区别" class="headerlink" title="CSS 盒模型：Margin vs Padding 的区别"></a>CSS 盒模型：Margin vs Padding 的区别</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>Padding（内边距）</strong></p>
-<ul>
-<li>定义：元素内容与边框之间的空间</li>
-<li>作用区域：元素内部</li>
-<li>背景色：会继承元素的背景色</li>
-<li>盒模型位置：在边框内部</li>
-<li><strong>对盒子大小的影响：会把盒子撑大</strong></li>
-</ul>
-<p><strong>Margin（外边距）</strong></p>
-<ul>
-<li>定义：元素边框与其他元素之间的空间</li>
-<li>作用区域：元素外部</li>
-<li>背景色：透明，不继承背景色</li>
-<li>盒模型位置：在边框外部</li>
-<li><strong>对盒子大小的影响：不会把盒子撑大</strong></li>
-</ul>
-<h3 id="盒模型-Margin-→-Border-→-Padding-→-Content"><a href="#盒模型-Margin-→-Border-→-Padding-→-Content" class="headerlink" title="盒模型:Margin → Border → Padding → Content"></a>盒模型:Margin → Border → Padding → Content</h3><p><img src="/pictures/%E7%9B%92%E6%A8%A1%E5%9E%8B.webp" srcset="/img/loading.gif" lazyload></p>
-<h3 id="对盒子大小的影响"><a href="#对盒子大小的影响" class="headerlink" title="对盒子大小的影响"></a>对盒子大小的影响</h3><p><strong>Padding 会把盒子撑大</strong></p>
-<ul>
-<li>原因：Padding 是元素内容与边框之间的空间，属于元素内部</li>
-<li>效果：增加 padding 会让元素的实际显示区域变大</li>
-<li>举例：如果元素原本是 100px × 100px，加上 20px 的 padding，实际显示大小就变成 140px × 140px</li>
-</ul>
-<p><strong>Margin 不会把盒子撑大</strong></p>
-<ul>
-<li>原因：Margin 是元素边框与其他元素之间的空间，属于元素外部</li>
-<li>效果：增加 margin 只会改变元素与其他元素的距离，不会改变元素本身的大小</li>
-<li>举例：如果元素原本是 100px × 100px，加上 20px 的 margin，元素本身还是 100px × 100px，只是与其他元素的距离增加了</li>
-</ul>
-<h3 id="在不同元素类型上的表现"><a href="#在不同元素类型上的表现" class="headerlink" title="在不同元素类型上的表现"></a>在不同元素类型上的表现</h3><p><strong>块级元素（如 div、p、h1-h6）</strong> ✅ 所有方向都有效</p>
-<ul>
-<li>可以设置上下左右的 margin 和 padding</li>
-<li>垂直方向的 margin 和 padding 都会影响布局</li>
-</ul>
-<p><strong>行内元素（如 span、a、**<strong>em*</strong>*）</strong> ⚠️ 只有水平方向有效</p>
-<ul>
-<li>水平方向的 margin 和 padding 有效</li>
-<li>垂直方向的 margin 和 padding 无效（不会影响布局）</li>
-</ul>
-<p><strong>行内块元素（display: inline-block）</strong> ✅ 所有方向都有效</p>
-<ul>
-<li>结合了行内和块级元素的优点</li>
-<li>可以设置宽高，所有方向的 margin 和 padding 都有效</li>
-</ul>
-<h3 id="实际应用场景"><a href="#实际应用场景" class="headerlink" title="实际应用场景"></a>实际应用场景</h3><p><strong>Padding 适用场景：</strong></p>
-<ul>
-<li>按钮内边距</li>
-<li>卡片内容与边框的距离</li>
-<li>文本与容器边框的间距</li>
-<li>需要背景色填充的区域</li>
-<li><strong>想要按钮更大时</strong></li>
-</ul>
-<p><strong>Margin 适用场景：</strong></p>
-<ul>
-<li>元素之间的间距</li>
-<li>页面布局</li>
-<li>居中对齐</li>
-<li>负边距实现特殊效果</li>
-<li><strong>想要元素间距时</strong></li>
-</ul>
-<h3 id="重要特性"><a href="#重要特性" class="headerlink" title="重要特性"></a>重要特性</h3><p><strong>Margin 合并（Margin Collapse）</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript">.<span class="hljs-property">box1</span> &#123; margin-<span class="hljs-attr">bottom</span>: 20px; &#125;<br>.<span class="hljs-property">box2</span> &#123; margin-<span class="hljs-attr">top</span>: 30px; &#125;<br><span class="hljs-comment">/* 实际间距是 30px，不是 50px */</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>负值使用</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-comment">/* Margin 可以为负值 */</span><br>.<span class="hljs-property">negative</span>-margin &#123; <span class="hljs-attr">margin</span>: -10px; &#125;<br><span class="hljs-comment">/* Padding 不能为负值 */</span><br>.<span class="hljs-property">negative</span>-padding &#123; <span class="hljs-attr">padding</span>: -10px; &#125;<br><span class="hljs-comment">/* 无效 */</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="记忆口诀"><a href="#记忆口诀" class="headerlink" title="记忆口诀"></a>记忆口诀</h3><p><strong>“外距透明可合并，内距有色不合并”</strong></p>
-<ul>
-<li>外距（margin）透明且可合并</li>
-<li>内距（padding）有色且不合并</li>
-</ul>
-<p><strong>“内距撑大外距不”</strong></p>
-<ul>
-<li>内距（padding）会把盒子撑大</li>
-<li>外距（margin）不会把盒子撑大</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li><strong>Margin</strong>：元素外部间距，透明背景，可以合并，不会撑大盒子</li>
-<li><strong>Padding</strong>：元素内部间距，继承背景色，不会合并，会把盒子撑大</li>
-<li><strong>选择原则</strong>：影响外部布局用 margin，影响内部间距用 padding</li>
-<li><strong>大小影响</strong>：想要改变元素本身大小用 padding，想要改变元素间距用 margin</li>
-</ul>
+                <p>在经历了两次比较正式的技术面试之后，我也开始反思自己的不足，找一些方法，去提高自己的面试水平，这篇文章接下来的分享内容都是来自于一档求职综艺《令人心动的 offer》第五季实习生<strong>王艺妍妤</strong>的小红书分享，共勉</p>
+<h3 id="在面试的时候，怎么能做到这么的自如，松弛？"><a href="#在面试的时候，怎么能做到这么的自如，松弛？" class="headerlink" title="在面试的时候，怎么能做到这么的自如，松弛？"></a>在面试的时候，怎么能做到这么的自如，松弛？</h3><ol>
+<li>第一点就是你的面试官看似咄咄逼人，刨根问底，但他其实是真的想了解你，<strong>想了解你跟当下的这个岗位的适配度怎么样，以及想了解你说的这些事情到底是不是真实的</strong>，主要就是这两大目的，所以面对面试官的步步紧逼，不要太慌，搞清楚这一点，有助于我们放下对面试官的偏见，那么在面对面试官的时候，心态也自然能好一点</li>
+<li>第二点就是在关键的时候，我们反而要<strong>把大事看小，不要太注重结果</strong>，告诉自己其实失败了也没有关系，因为明天天不会就塌下来，太阳还是会照常升起，而且<strong>找工作本身就是一个双向选择的过程</strong>，在你面试的时候，不仅仅是面试官在了解你，其实你也在了解这家公司，当你<strong>把自己的位置摆正，有选择权之后</strong>，心态上也会放松一些</li>
+<li>最后一点就是<strong>尽量保持真诚，不要伪装太多东西</strong>，因为”<strong>极度的坦诚就是无坚不摧</strong>“，面试的时候伪装最难受的后果就是，哪怕你真的入职了也干的并不开心，每天都心惊胆战</li>
+</ol>
+<h3 id="自我介绍要点"><a href="#自我介绍要点" class="headerlink" title="自我介绍要点"></a><strong>自我介绍要点</strong></h3><p>首先明白，自我介绍的作用是什么？这里继续引用<strong>妍妤</strong>分享的一些观点</p>
+<ol>
+<li><p>你在自我介绍的时候，面试官正在翻你的简历，所以<strong>自我介绍非常重要的一个作用就是指引作用</strong>，是<strong>带着面试官的眼睛去看你简历里的那些出彩的地方</strong>，所以介绍完自己的姓名，教育背景等基本信息后，大家就可以尝试带着面试官的注意力，去到你简历上的那些亮眼的部分，<strong>比如说你可能有一次得了一个厉害的奖项，那你就可以告诉面试官为了得到这个奖项，你付出了哪些努力，在得到这个奖之后呢，你又有了哪些成长和感悟，这整个过程中，你培养了哪些技能点，是跟这个岗位高度适配的</strong>，总而言之，既然已经坐在了面试官的面前，就不要放过这次推销自己的机会</p>
+</li>
+<li><p>我在做自我介绍的时候，其实不会把我的方方面面都介绍的非常具体，因为<strong>有时候面面俱到就意味着没有重点</strong>，而当你详略得当的时候，反而有可能让面试官更加关注那些你想让他关注的东西</p>
+<h3 id="回答面试问题"><a href="#回答面试问题" class="headerlink" title="回答面试问题"></a>回答面试问题</h3><p>那一般在做完自我介绍之后，面试官可能还会问你一些问题，那么在回答这些问题的时候，有一个万变不离其宗的原则就是，<strong>你的回答要么就是突出你具备和这个岗位适配的专业技能，要么就是突出你跟这个岗位有适配的性格特点</strong>，这些问题的中间有一个我想单独拿出来和大家分享的点就是，当面试官聊起，或者要求你<strong>聊起以前一些你失败的经历或者是你的缺点的时候</strong>，我们应该怎么回答，我想告诉大家的就是，<strong>其实面试官他并不是不允许你失败，或者是不允许你有缺点</strong>，其实他是想知道<strong>你有没有在跌倒之后重新站起来的能力，以及有没有从失败中学习成长的能力，以及有没有认识自己，尤其是认识自己的不足，并且能够付出努力，去弥补自己这些不足的能力</strong>，所以说回答这个问题比较好的解决方法就是，把整个问题回答的<strong>重点放在你的成长收获和感悟上面</strong>，而不是只傻傻的去讨论自己失败的这件事情。</p>
+</li>
+</ol>
 
                 
               </div>
@@ -378,7 +308,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/CSS/" class="category-chain-item">CSS</a>
+  <a href="/categories/%E5%85%B3%E4%BA%8E%E9%9D%A2%E8%AF%95/" class="category-chain-item">关于面试</a>
   
   
 
@@ -393,7 +323,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CSS/" class="print-no-link">#CSS</a>
+        <a href="/tags/%E9%9D%A2%E8%AF%95/" class="print-no-link">#面试</a>
       
     </div>
   
@@ -405,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CSS 盒模型：Margin vs Padding 的区别</div>
-      <div>http://example.com/2025/08/24/CSS-盒模型：Margin-vs-Padding-的区别/</div>
+      <div>写在前面的面试技巧分享</div>
+      <div>http://example.com/2025/09/14/写在前面的面试技巧分享/</div>
     </div>
     <div class="license-meta">
       
@@ -418,7 +348,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月24日</div>
+          <div>2025年9月14日</div>
         </div>
       
       
@@ -450,18 +380,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/26/%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82URL%EF%BC%88%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6%EF%BC%89/" title="一文读懂URL（统一资源定位符）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一文读懂URL（统一资源定位符）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/05/06/%E4%BB%8E%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%88%B0%E5%85%83%E5%AE%87%E5%AE%99%EF%BC%9A%E7%94%A8%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E6%8B%86%E8%A7%A3%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%BC%94%E5%8C%96%E5%8F%B2%E4%B8%8E%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84/" title="从静态页面到元宇宙：用第一性原理拆解前端技术演化史与学习路径">
-                        <span class="hidden-mobile">从静态页面到元宇宙：用第一性原理拆解前端技术演化史与学习路径</span>
+                      <a href="/2025/09/07/%E9%87%8D%E6%96%B0%E7%90%86%E8%A7%A3JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9A%E5%80%BC%E7%B1%BB%E5%9E%8B-vs-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" title="重新理解JavaScript数据类型：值类型 vs 引用类型">
+                        <span class="hidden-mobile">重新理解JavaScript数据类型：值类型 vs 引用类型</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
