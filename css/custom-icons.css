@@ -1,0 +1,50 @@
+/* 自定义图标样式 */
+.custom-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+/* GitHub图标 - 白天模式 */
+.github-icon {
+  background-image: url('/pictures/icon/github-fill.svg');
+}
+
+/* 掘金图标 - 白天模式 */
+.juejin-icon {
+  background-image: url('/pictures/icon/juejin.svg');
+}
+
+/* 网易云图标 - 白天模式 */
+.wangyiyun-icon {
+  background-image: url('/pictures/icon/网易云音乐.svg');
+}
+
+/* 暗色模式下的图标切换 */
+[data-user-color-scheme="dark"] .github-icon {
+  background-image: url('/pictures/icon/github-fill-dark.svg');
+}
+
+[data-user-color-scheme="dark"] .juejin-icon {
+  background-image: url('/pictures/icon/juejin-dark.svg');
+}
+
+[data-user-color-scheme="dark"] .wangyiyun-icon {
+  background-image: url('/pictures/icon/网易云音乐-dark.svg');
+}
+
+/* 悬浮效果 */
+.custom-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* 确保图标在关于页面正确显示 */
+.about .custom-icon {
+  margin: 0 8px;
+  vertical-align: middle;
+}
